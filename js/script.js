@@ -113,7 +113,7 @@ window.addEventListener("DOMContentLoaded",()=>{
         modal.classList.remove('hide');
         document.body.style.overflow='hidden';
         //если пользователь мех открыл окно , то оно больше не появится 
-        clearInterval(modalTimerId);
+       /*  clearInterval(modalTimerId); */
     }
 
     function closeModal(){
