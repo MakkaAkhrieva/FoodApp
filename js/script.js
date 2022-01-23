@@ -254,15 +254,17 @@ window.addEventListener("DOMContentLoaded",()=>{
 
             const formData = new FormData(form);
 
-            const object ={};
+            const json=JSON.stringify(Object.fromEntries(formData.entries()));
+
+        /*     const object ={};
 
             formData.forEach(function(value,key){
                 object[key]=value;
             });
-
+ */
             //form - та форма откуда нудно взять данные
 
-            postData('http://localhost:3000/requests',JSON.stringify(object))
+            postData('http://localhost:3000/requests',json)
             .then(data=>{
                 console.log(data);
                 showThanksModal(message.success);
